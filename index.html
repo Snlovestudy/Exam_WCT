@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIA Attribute Demo</title>
+</head>
+<body>
+    <h1> ARIA Attribute Demo</h1>
+
+    <div id="example" role="alert" aria-live="assertive">
+        This is a dynamic alert area.
+    </div>
+
+    <button id="updateAlert">Trigger Alert</button>
+
+    <script>
+        // Correcting the ID for the alertDiv
+        const alertDiv = document.getElementById('example');
+        
+        // Correcting the ID for the button
+        const button = document.getElementById('updateAlert');
+
+        button.addEventListener('click', () => {
+            // Dynamically update the alert text with your full name
+            alertDiv.textContent = 'Updated to full name: Met sreynoy';
+        });
+    </script>
+</body>
+</html>
